@@ -112,10 +112,10 @@
                 
                 <!-- Navigation - Desktop -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-white hover:text-blue-200 font-medium transition">Accueil</a>
-                    <a href="#scholar" class="nav-link text-white hover:text-blue-200 font-medium transition">SCHOLAR</a>
-                    <a href="#business" class="nav-link text-white hover:text-blue-200 font-medium transition">BUSINESS</a>
-                    <a href="#express" class="nav-link text-white hover:text-blue-200 font-medium transition">EXPRESS</a>
+                    <a href="home.html" class="nav-link text-white hover:text-blue-200 font-medium transition">Accueil</a>
+                    <a href="scholar.html" class="nav-link text-white hover:text-blue-200 font-medium transition">SCHOLAR</a>
+                    <a href="business.html" class="nav-link text-white hover:text-blue-200 font-medium transition">BUSINESS</a>
+                    <a href="express.html" class="nav-link text-white hover:text-blue-200 font-medium transition">EXPRESS</a>
                 </nav>
                 
                 <!-- Contact Button -->
@@ -135,10 +135,10 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-blue-900">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-white font-medium">Accueil</a>
-                <a href="#scholar" class="block px-3 py-2 text-white font-medium">SCHOLAR</a>
-                <a href="#business" class="block px-3 py-2 text-white font-medium">BUSINESS</a>
-                <a href="#express" class="block px-3 py-2 text-white font-medium">EXPRESS</a>
+                <a href="home.html" class="block px-3 py-2 text-white font-medium">Accueil</a>
+                <a href="scholar.html" class="block px-3 py-2 text-white font-medium">SCHOLAR</a>
+                <a href="business.html" class="block px-3 py-2 text-white font-medium">BUSINESS</a>
+                <a href="express.html" class="block px-3 py-2 text-white font-medium">EXPRESS</a>
                 <button class="block w-full text-left px-3 py-2 text-blue-900 bg-white rounded font-semibold mt-2">
                     Contactez-nous
                 </button>
@@ -172,7 +172,7 @@
                 <!-- Hero Image -->
                 <div class="md:w-1/2 mt-12 md:mt-0 fade-in">
                     <div class="relative floating">
-                        <img src="assets/logo/BS INTERNATIONAL_Plan de travail 1.png" alt="BS INTERNATIONAL - Accompagnement études et business au Maroc" class="rounded-lg shadow-2xl transform rotate-1">
+                        <img src="assets/img/fille.svg" alt="BS INTERNATIONAL - Accompagnement études et business au Maroc" class="rounded-lg shadow-2xl transform rotate-1">
                         <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg w-32 h-32 flex items-center justify-center">
                             <span class="text-blue-800 font-bold text-center">+15 ans d'expertise</span>
                         </div>
@@ -191,7 +191,7 @@
             <div class="flex flex-col md:flex-row items-center bg-white rounded-3xl shadow-xl overflow-hidden">
                 <!-- About Image -->
                 <div class="md:w-1/2 h-full">
-                    <div class="h-full bg-cover bg-center" style="background-image: url('assets/images/equipe-bs-international.jpg'); min-height: 400px;" aria-label="Notre équipe BS INTERNATIONAL au Burkina Faso"></div>
+                    <div class="h-full bg-cover bg-center" style="background-image: url('assets/logo/BS INTERNATIONAL_Plan de travail 1.png'); min-height: 400px;" aria-label="Notre équipe BS INTERNATIONAL au Burkina Faso"></div>
                 </div>
                 
                 <!-- About Content -->
@@ -572,9 +572,10 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-6">Navigation</h3>
                     <ul class="space-y-3">
-                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
-                        <li><a href="#etudes" class="text-gray-400 hover:text-white transition">Étudier au Maroc</a></li>
-                        <li><a href="#business" class="text-gray-400 hover:text-white transition">Business au Maroc</a></li>
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="scholar.html" class="text-gray-400 hover:text-white transition">Étudier au Maroc</a></li>
+                        <li><a href="business.html" class="text-gray-400 hover:text-white transition">Business au Maroc</a></li>
+                        <li><a href="express.html" class="text-gray-400 hover:text-white transition">Services Express</a></li>
                         <li><a href="#temoignages" class="text-gray-400 hover:text-white transition">Témoignages</a></li>
                         <li><a href="#a-propos" class="text-gray-400 hover:text-white transition">À propos</a></li>
                     </ul>
@@ -750,14 +751,25 @@
     </div>
 
     <!-- Chatbot -->
-    <div id="chatbot" class="fixed bottom-6 right-6 z-40">
-        <button class="bg-blue-600 text-white h-14 w-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition">
-            <i class="fas fa-comment-dots text-2xl"></i>
+    <div id="chatbot" class="fixed bottom-6 right-6 z-50">
+        <button id="chatbot-button" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+            <i class="fas fa-comments text-2xl"></i>
         </button>
+        <div id="chatbot-box" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-lg shadow-xl p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold text-gray-800">Chatbot BS INTERNATIONAL</h3>
+                <button id="close-chatbot" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chatbot-message" class="text-gray-600">
+                Bientôt vous pourrez discuter avec moi et me poser toutes vos questions 😊
+            </div>
+        </div>
     </div>
 
-    <!-- Back to Top -->
-    <button id="back-to-top" class="fixed bottom-6 left-6 z-40 bg-gray-800 text-white h-12 w-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-700 transition hidden">
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-50">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -806,9 +818,22 @@
             contactForm.reset();
         });
 
-        // Back to Top Button
+        // Chatbot functionality
+        const chatbotButton = document.getElementById('chatbot-button');
+        const chatbotBox = document.getElementById('chatbot-box');
+        const closeChatbot = document.getElementById('close-chatbot');
+
+        chatbotButton.addEventListener('click', () => {
+            chatbotBox.classList.toggle('hidden');
+        });
+
+        closeChatbot.addEventListener('click', () => {
+            chatbotBox.classList.add('hidden');
+        });
+
+        // Back to Top functionality
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('hidden');
@@ -816,9 +841,12 @@
                 backToTopButton.classList.add('hidden');
             }
         });
-        
+
         backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Header Scroll Effect
