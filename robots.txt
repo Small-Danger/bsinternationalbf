@@ -1,0 +1,39 @@
+# www.robotstxt.org
+
+# Autoriser l'indexation de tout le site
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bsinternational.netlify.app/sitemap.xml
+
+# Empêcher l'indexation des fichiers système et des ressources non pertinentes
+Disallow: /.git/
+Disallow: /.netlify/
+Disallow: /node_modules/
+Disallow: /README.md
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/fonts/
+
+# Autoriser l'indexation des images
+Allow: /assets/images/
+Allow: /assets/logo/
+
+# Optimisation pour les moteurs de recherche spécifiques
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Empêcher l'indexation des pages de test et de développement
+Disallow: /test/
+Disallow: /dev/
+Disallow: /staging/ 
