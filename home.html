@@ -145,6 +145,28 @@
     </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'blue': {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+            }
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -155,6 +177,19 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        section, div, p, h1, h2, h3, h4, h5, h6, span {
+            /* color: #222 !important; */
+            /* opacity: 1 !important; */
+            /* visibility: visible !important; */
+        }
+        .fade-in, .fade-in.visible {
+            /* opacity: 1 !important; */
+            /* transition: none !important; */
         }
         
         /* Optimisations pour les images */
@@ -299,15 +334,6 @@
             background: linear-gradient(135deg, rgba(0,114,188,0.8) 0%, rgba(0,60,120,0.9) 100%);
         }
         
-        .fade-in {
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-        }
-        
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
@@ -354,6 +380,87 @@
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
             }
+        }
+
+        /* Harmonisation des couleurs comme les autres pages */
+        /* Texte blanc sur fond bleu ou foncé */
+        .hero-section,
+        .bg-blue-900,
+        .bg-blue-800,
+        .bg-gradient-to-br {
+            color: #fff !important;
+        }
+        .hero-section h1,
+        .hero-section h2,
+        .hero-section h3,
+        .hero-section p,
+        .bg-blue-900 h2,
+        .bg-blue-900 p,
+        .bg-blue-800 h2,
+        .bg-blue-800 p {
+            color: #fff !important;
+        }
+        /* Titres et sous-titres sur fond clair */
+        .bg-white h2,
+        .bg-white h3,
+        .bg-white p,
+        .bg-gradient-to-br h2,
+        .bg-gradient-to-br h3,
+        .bg-gradient-to-br p {
+            color: #1e293b !important; /* bleu foncé Tailwind */
+        }
+        /* Sous-titres et textes secondaires */
+        .text-blue-900,
+        .text-blue-800,
+        .text-blue-200,
+        .text-gray-600,
+        .text-gray-800 {
+            color: inherit !important;
+        }
+        /* Footer : texte et icônes en blanc partout */
+        footer.bg-gray-900, footer.bg-gray-900 *,
+        footer.bg-gray-900 .fab, footer.bg-gray-900 svg {
+            color: #fff !important;
+            fill: #fff !important;
+        }
+        /* Tooltip Chatbot visible et lisible sur mobile */
+        .chatbase-tooltip {
+            visibility: hidden;
+            background: rgba(34, 34, 34, 0.95);
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px 18px;
+            position: absolute;
+            z-index: 99999;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 15px;
+            pointer-events: none;
+            white-space: pre-line;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            max-width: 90vw;
+            width: auto;
+            line-height: 1.4;
+        }
+        @media (max-width: 600px) {
+            .chatbase-tooltip {
+                font-size: 13px;
+                padding: 8px 10px;
+                max-width: 95vw;
+                bottom: 130%;
+            }
+        }
+        [aria-label="Open chat"]:hover .chatbase-tooltip,
+        [aria-label="Open chat"]:focus .chatbase-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        [aria-label="Open chat"] {
+            position: relative !important;
         }
     </style>
 </head>
@@ -532,31 +639,40 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20 bg-blue-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-4">Notre impact en chiffres</h2>
-                <p class="text-xl text-blue-200 max-w-2xl mx-auto">
-                    Des résultats qui parlent d'eux-mêmes
-                </p>
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Notre impact en chiffres</h2>
+                <p class="text-lg text-blue-200">Des résultats concrets pour nos clients</p>
             </div>
-            
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div class="fade-in">
-                    <div class="text-5xl font-bold mb-2 counter" data-target="1500">0</div>
-                    <div class="text-blue-200">Clients satisfaits</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-800 rounded-full p-4 mb-3">
+                        <i class="fas fa-users text-3xl text-yellow-300"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-extrabold">1500</div>
+                    <div class="text-blue-200 mt-1 text-sm md:text-base">Clients satisfaits</div>
                 </div>
-                <div class="fade-in">
-                    <div class="text-5xl font-bold mb-2 counter" data-target="15">0</div>
-                    <div class="text-blue-200">Pays couverts</div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-800 rounded-full p-4 mb-3">
+                        <i class="fas fa-globe-africa text-3xl text-yellow-300"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-extrabold">15</div>
+                    <div class="text-blue-200 mt-1 text-sm md:text-base">Pays couverts</div>
                 </div>
-                <div class="fade-in">
-                    <div class="text-5xl font-bold mb-2 counter" data-target="98">0</div>
-                    <div class="text-blue-200">% de réussite</div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-800 rounded-full p-4 mb-3">
+                        <i class="fas fa-trophy text-3xl text-yellow-300"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-extrabold">98</div>
+                    <div class="text-blue-200 mt-1 text-sm md:text-base">% de réussite</div>
                 </div>
-                <div class="fade-in">
-                    <div class="text-5xl font-bold mb-2 counter" data-target="50">0</div>
-                    <div class="text-blue-200">Partenaires</div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-800 rounded-full p-4 mb-3">
+                        <i class="fas fa-handshake text-3xl text-yellow-300"></i>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-extrabold">50</div>
+                    <div class="text-blue-200 mt-1 text-sm md:text-base">Partenaires</div>
                 </div>
             </div>
         </div>
@@ -697,11 +813,11 @@
                 <!-- Column 1: Logo -->
                 <div>
                     <div class="flex items-center mb-6">
-                        <img src="assets/logo/BS INTERNATIONAL(b)_Plan de travail 1.png" alt="BS INTERNATIONAL - Accompagnement études et business au Maroc" class="h-10">
+                        <img src="assets/logo/BS INTERNATIONAL_Plan de travail 1.png" alt="BS INTERNATIONAL - Transport & Logistique" class="h-10">
                         <span class="ml-3 font-bold text-xl">BS INTERNATIONAL</span>
                     </div>
                     <p class="text-gray-400">
-                        Votre partenaire de confiance pour réussir vos projets d'études et de business au Maroc. Expertise depuis le Burkina Faso.
+                        Votre partenaire de confiance pour le transport et la logistique entre le Burkina Faso et le Maroc.
                     </p>
                 </div>
                 
@@ -1081,48 +1197,6 @@
             fadeInObserver.observe(element);
         });
 
-        // Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-        
-        const startCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = target / speed;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(startCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        };
-        
-        const counterObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                startCounters();
-            }
-        }, { threshold: 0.5 });
-        
-        if (counters.length > 0) {
-            counterObserver.observe(document.querySelector('.counter'));
-        }
-
-        // Pause testimonial animation on hover
-        const testimonialTrack = document.querySelector('.testimonial-track');
-        
-        if (testimonialTrack) {
-            testimonialTrack.addEventListener('mouseenter', () => {
-                testimonialTrack.style.animationPlayState = 'paused';
-            });
-            
-            testimonialTrack.addEventListener('mouseleave', () => {
-                testimonialTrack.style.animationPlayState = 'running';
-            });
-        }
-
         // Optimisation du chargement des images
         document.addEventListener('DOMContentLoaded', function() {
             const lazyImages = document.querySelectorAll('img[data-src]');
@@ -1196,33 +1270,33 @@
         }
         // Style du tooltip
         const style = document.createElement('style');
-        style.innerHTML = `
-        .chatbase-tooltip {
+        style.innerHTML = `        .chatbase-tooltip {
             visibility: hidden;
             background: rgba(34, 34, 34, 0.95);
             color: #fff;
             text-align: center;
             border-radius: 8px;
-            padding: 8px 16px;
+            padding: 10px 18px;
             position: absolute;
-            z-index: 9999;
+            z-index: 99999;
             bottom: 120%;
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
             transition: opacity 0.3s;
-            font-size: 14px;
+            font-size: 15px;
             pointer-events: none;
-            white-space: nowrap;
+            white-space: pre-line;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            max-width: 200px;
+            max-width: 90vw;
             width: auto;
+            line-height: 1.4;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .chatbase-tooltip {
-                font-size: 12px;
-                padding: 6px 12px;
-                max-width: 150px;
+                font-size: 13px;
+                padding: 8px 10px;
+                max-width: 95vw;
                 bottom: 130%;
             }
         }
