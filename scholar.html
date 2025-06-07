@@ -148,6 +148,194 @@
         }
     </style>
 </head>
+<style>
+    /* Style personnalisé pour le bouton du chatbot */
+    .chatbase-button-custom {
+        background-color: #0072bc !important;
+        border-radius: 50% !important;
+        box-shadow: 0 4px 12px rgba(0, 114, 188, 0.3) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .chatbase-button-custom:hover {
+        transform: scale(1.1) !important;
+        box-shadow: 0 6px 16px rgba(0, 114, 188, 0.4) !important;
+    }
+    
+    /* Badge de notification */
+    .chatbase-notification-badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: #f59e0b;
+        color: white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    /* Message d'accueil flottant */
+    .chatbase-welcome-message {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        background: white;
+        padding: 12px 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        max-width: 250px;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: 9998;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .chatbase-welcome-message.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .chatbase-welcome-message:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 30px;
+        border-width: 10px 10px 0;
+        border-style: solid;
+        border-color: white transparent transparent;
+    }
+    
+    .chatbase-welcome-message p {
+        margin: 0;
+        color: #1e293b;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .chatbase-welcome-message strong {
+        color: #0072bc;
+    }
+    
+    .chatbase-close-welcome {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background: none;
+        border: none;
+        color: #94a3b8;
+        font-size: 12px;
+        cursor: pointer;
+    }
+</style>
+
+<!-- Message d'accueil du chatbot -->
+<div id="chatbase-welcome" class="chatbase-welcome-message">
+    <button class="chatbase-close-welcome" aria-label="Fermer">&times;</button>
+    <p><strong>👋 Bonjour !</strong><br>Je suis votre assistant BS INTERNATIONAL. Posez-moi vos questions sur nos services !</p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Variables pour gérer le scroll
+    let isScrolling;
+    let welcomeShown = false;
+    const welcomeMessage = document.getElementById('chatbase-welcome');
+    const closeWelcomeBtn = document.querySelector('.chatbase-close-welcome');
+    
+    // Personnalisation du bouton Chatbase
+    const customizeChatbaseButton = () => {
+        const chatbaseBtn = document.querySelector('[aria-label="Open chat"]');
+        if (chatbaseBtn) {
+            // Ajout de classes personnalisées
+            chatbaseBtn.classList.add('chatbase-button-custom');
+            
+            // Ajout d'un badge de notification
+            const badge = document.createElement('div');
+            badge.className = 'chatbase-notification-badge';
+            badge.innerHTML = '💬';
+            chatbaseBtn.appendChild(badge);
+            
+            // Animation du badge au survol
+            chatbaseBtn.addEventListener('mouseenter', () => {
+                badge.style.transform = 'scale(1.2)';
+            });
+            
+            chatbaseBtn.addEventListener('mouseleave', () => {
+                badge.style.transform = 'scale(1)';
+            });
+        }
+    };
+    
+    // Fonction pour afficher le message
+    function showWelcomeMessage() {
+        if (!welcomeShown && welcomeMessage) {
+            welcomeMessage.classList.add('visible');
+            welcomeShown = true;
+            
+            // Masquer après 8 secondes
+            setTimeout(() => {
+                welcomeMessage.classList.remove('visible');
+            }, 8000);
+        }
+    }
+    
+    // Gestion du scroll
+    window.addEventListener('scroll', function() {
+        // Annule le timer s'il y a un scroll
+        window.clearTimeout(isScrolling);
+        
+        // Cache le message pendant le scroll
+        if (welcomeMessage) {
+            welcomeMessage.classList.remove('visible');
+        }
+        
+        // Démarre un timer quand le scroll s'arrête
+        isScrolling = setTimeout(function() {
+            showWelcomeMessage();
+        }, 1000); // Délai après l'arrêt du scroll (1 seconde)
+    }, false);
+    
+    // Fermer le message au clic
+    if (closeWelcomeBtn) {
+        closeWelcomeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (welcomeMessage) {
+                welcomeMessage.classList.remove('visible');
+                welcomeShown = true; // Empêche la réapparition
+            }
+        });
+    }
+    
+    // Surveiller l'apparition du bouton Chatbase
+    const chatbaseInterval = setInterval(() => {
+        const chatbaseBtn = document.querySelector('[aria-label="Open chat"]');
+        if (chatbaseBtn) {
+            customizeChatbaseButton();
+            clearInterval(chatbaseInterval);
+            
+            // Afficher le message après 3s si pas de scroll
+            setTimeout(() => {
+                if (!welcomeShown) {
+                    showWelcomeMessage();
+                }
+            }, 3000);
+        }
+    }, 500);
+});
+</script>
 <body class="bg-gray-50 overflow-x-hidden">
     <!-- Header -->
     <header id="header" class="fixed w-full z-50 transition-all duration-500 bg-transparent">
