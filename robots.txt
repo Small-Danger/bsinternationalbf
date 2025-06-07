@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://bsinternational.netlify.app/sitemap.xml
+Sitemap: https://bsinternationales.com/sitemap.xml
 
 # Empêcher l'indexation des fichiers système et des ressources non pertinentes
 Disallow: /.git/
