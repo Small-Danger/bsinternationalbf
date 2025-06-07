@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0072bc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="apple-mobile-web-app-title" content="BS INTERNATIONAL">
+    
+    <!-- SEO Meta Tags -->
+    <title>À propos - BS INTERNATIONAL | Votre Partenaire de Confiance pour le Maroc</title>
+    <meta name="description" content="Découvrez BS INTERNATIONAL, votre expert en accompagnement des étudiants et entrepreneurs africains au Maroc. Plus de 15 ans d'expertise depuis le Burkina Faso.">
+    <meta name="keywords" content="BS INTERNATIONAL, à propos, histoire, mission, vision, valeurs, équipe, Burkina Faso, Maroc, accompagnement étudiant, business">
+    <meta name="author" content="BS INTERNATIONAL">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bsinternationales.com/about.html">
+    <meta property="og:title" content="À propos - BS INTERNATIONAL | Votre Partenaire de Confiance pour le Maroc">
+    <meta property="og:description" content="Découvrez BS INTERNATIONAL, votre expert en accompagnement des étudiants et entrepreneurs africains au Maroc. Plus de 15 ans d'expertise depuis le Burkina Faso.">
+    <meta property="og:image" content="https://bsinternationales.com/assets/logo/BS INTERNATIONAL_Plan de travail 1.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bsinternationales.com/about.html">
+    <meta property="twitter:title" content="À propos - BS INTERNATIONAL | Votre Partenaire de Confiance pour le Maroc">
+    <meta property="twitter:description" content="Découvrez BS INTERNATIONAL, votre expert en accompagnement des étudiants et entrepreneurs africains au Maroc. Plus de 15 ans d'expertise depuis le Burkina Faso.">
+    <meta property="twitter:image" content="https://bsinternationales.com/assets/logo/BS INTERNATIONAL_Plan de travail 1.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bsinternationales.com/about.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/logo/192 BS INTERNATIONAL_Plan de travail 1.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/logo/512 BS INTERNATIONAL_Plan de travail 1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/192 BS INTERNATIONAL_Plan de travail 1.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0,114,188,0.8) 0%, rgba(0,60,120,0.9) 100%);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #0072bc;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0072bc;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+            
+            .timeline-item::after {
+                left: -3px;
+                width: 8px;
+                height: 8px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header id="header" class="fixed w-full z-50 transition-all duration-500 bg-transparent">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center min-w-0">
+                    <img src="assets/logo/BS INTERNATIONAL_Plan de travail 1.png" alt="BS INTERNATIONAL Logo" class="h-10 w-auto max-w-[48px] min-w-[40px] object-contain" style="min-width:40px;max-width:48px;">
+                    <span id="header-logo-text" class="ml-2 text-white font-bold text-base sm:text-xl truncate" style="white-space:nowrap;">BS INTERNATIONAL</span>
+                </div>
+                
+                <!-- Navigation - Desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="nav-link text-white hover:text-blue-200 font-medium transition">Accueil</a>
+                    <a href="scholar.html" class="nav-link text-white hover:text-blue-200 font-medium transition">Étudier au Maroc</a>
+                    <a href="business.html" class="nav-link text-white hover:text-blue-200 font-medium transition">Business au Maroc</a>
+                    <a href="express.html" class="nav-link text-white hover:text-blue-200 font-medium transition">Services Express</a>
+                    <a href="about.html" class="nav-link text-white hover:text-blue-200 font-medium transition">À propos</a>
+                </nav>
+                
+                <!-- Contact Button -->
+                <button id="contact-btn" class="hidden md:block bg-white text-blue-800 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition">
+                    Contactez-nous
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg id="mobile-menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="home.html" class="block px-3 py-2 text-white font-medium">Accueil</a>
+                <a href="scholar.html" class="block px-3 py-2 text-white font-medium">Étudier au Maroc</a>
+                <a href="business.html" class="block px-3 py-2 text-white font-medium">Business au Maroc</a>
+                <a href="express.html" class="block px-3 py-2 text-white font-medium">Services Express</a>
+                <a href="about.html" class="block px-3 py-2 text-white font-medium">À propos</a>
+                <button class="block w-full text-left px-3 py-2 text-blue-900 bg-white rounded font-semibold mt-2">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-[60vh] flex items-center justify-center relative pt-20">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto px-6 z-10">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Notre Histoire</h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                    Découvrez l'histoire de BS INTERNATIONAL, votre partenaire de confiance pour réussir au Maroc
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Histoire Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline-item mb-12 fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Notre Début</h2>
+                    <p class="text-gray-600">
+                        Fondée au Burkina Faso, BS INTERNATIONAL est née de la vision de faciliter l'accès aux études et aux opportunités d'affaires au Maroc pour les Africains. Notre expertise s'est construite au fil des années, avec une compréhension approfondie des besoins spécifiques des étudiants et entrepreneurs africains.
+                    </p>
+                </div>
+                
+                <div class="timeline-item mb-12 fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Notre Mission</h2>
+                    <p class="text-gray-600">
+                        Notre mission est d'accompagner les étudiants et entrepreneurs africains dans leur projet d'études et de business au Maroc. Nous nous engageons à fournir un service personnalisé et de qualité, en tenant compte des spécificités de chaque projet.
+                    </p>
+                </div>
+                
+                <div class="timeline-item mb-12 fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Notre Vision</h2>
+                    <p class="text-gray-600">
+                        Nous aspirons à devenir le leader de l'accompagnement des Africains au Maroc, en offrant des solutions innovantes et adaptées aux besoins de nos clients. Notre objectif est de contribuer au développement des relations entre l'Afrique et le Maroc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Valeurs Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nos Valeurs</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Confiance</h3>
+                    <p class="text-gray-600">
+                        Nous construisons des relations durables basées sur la confiance et la transparence avec nos clients et partenaires.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Excellence</h3>
+                    <p class="text-gray-600">
+                        Nous visons l'excellence dans chaque service que nous offrons, en nous assurant de la satisfaction de nos clients.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Accompagnement</h3>
+                    <p class="text-gray-600">
+                        Nous accompagnons nos clients à chaque étape de leur projet, en leur offrant un soutien personnalisé et adapté.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Équipe Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Notre Équipe</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg fade-in">
+                    <div class="p-6">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="assets/images/team/ceo.jpg" alt="Directeur BS INTERNATIONAL" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Directeur</h3>
+                        <p class="text-gray-600 text-center">
+                            Plus de 15 ans d'expérience dans l'accompagnement des étudiants et entrepreneurs africains au Maroc.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg fade-in">
+                    <div class="p-6">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="assets/images/team/manager.jpg" alt="Manager BS INTERNATIONAL" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Manager</h3>
+                        <p class="text-gray-600 text-center">
+                            Expert en relations internationales et en développement des affaires au Maroc.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg fade-in">
+                    <div class="p-6">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="assets/images/team/consultant.jpg" alt="Consultant BS INTERNATIONAL" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Consultant</h3>
+                        <p class="text-gray-600 text-center">
+                            Spécialiste en accompagnement des étudiants et en procédures administratives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto fade-in">
+                <h2 class="text-4xl font-bold mb-6">Prêt à réaliser votre projet au Maroc ?</h2>
+                <p class="text-xl text-blue-200 mb-8">
+                    Que vous soyez étudiant ou entrepreneur africain, nous vous accompagnons dans toutes vos démarches pour réussir au Maroc.
+                </p>
+                <button id="open-contact-modal" class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition">
+                    Contactez-nous pour un accompagnement personnalisé
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Logo -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="assets/logo/BS INTERNATIONAL_Plan de travail 1.png" alt="BS INTERNATIONAL Logo" class="h-10">
+                        <span class="ml-3 font-bold text-xl">BS INTERNATIONAL</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Votre partenaire de confiance pour réussir vos projets d'études et de business au Maroc. Expertise depuis le Burkina Faso.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="scholar.html" class="text-gray-400 hover:text-white transition">Étudier au Maroc</a></li>
+                        <li><a href="business.html" class="text-gray-400 hover:text-white transition">Business au Maroc</a></li>
+                        <li><a href="express.html" class="text-gray-400 hover:text-white transition">Services Express</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>contact@bs-international.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>+212 603402577 / +226 63126849</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Avenue Lamine Gueye, 1200 LOGEMENTS, Ouagadougou, Burkina Faso</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Social -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Réseaux sociaux</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61576007463610" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition" aria-label="Facebook BS INTERNATIONAL">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-pink-600 transition" aria-label="Instagram BS INTERNATIONAL">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-green-500 transition" aria-label="WhatsApp BS INTERNATIONAL">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition" aria-label="LinkedIn BS INTERNATIONAL">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 BS INTERNATIONAL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative bg-white rounded-xl max-w-md w-full mx-4 p-8 max-h-[90vh] overflow-y-auto">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Contactez-nous</h3>
+            
+            <form id="contact-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-gray-700 mb-2">Numéro de téléphone</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label for="service" class="block text-gray-700 mb-2">Service concerné</label>
+                    <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Sélectionnez un service</option>
+                        <option value="scholar">SCHOLAR</option>
+                        <option value="business">BUSINESS</option>
+                        <option value="express">EXPRESS</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Que voulez-vous savoir ?" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                    Envoyer la demande
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Déclarations globales des variables
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuIcon = mobileMenuButton ? mobileMenuButton.querySelector('svg') : null;
+
+        // Mobile Menu Toggle
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Modal
+        const contactModal = document.getElementById('contact-modal');
+        const openContactModal = document.getElementById('open-contact-modal');
+        const closeModal = document.getElementById('close-modal');
+        const contactBtn = document.getElementById('contact-btn');
+        
+        openContactModal.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+        });
+        
+        closeModal.addEventListener('click', () => {
+            contactModal.classList.add('hidden');
+        });
+        
+        contactBtn.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+        });
+        
+        // Close modal when clicking outside
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.classList.add('hidden');
+            }
+        });
+
+        // Form Submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+            contactModal.classList.add('hidden');
+            contactForm.reset();
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            // Fermer le menu mobile au scroll
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+            if (window.pageYOffset > 100) {
+                header.classList.remove('bg-transparent');
+                header.classList.add('bg-white', 'shadow-md');
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+                // Logo texte en noir
+                const logoText = header.querySelector('span');
+                if (logoText) {
+                    logoText.classList.add('text-gray-800');
+                    logoText.classList.remove('text-white');
+                }
+                // Icône menu mobile en noir
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.classList.add('text-gray-800');
+                    mobileMenuIcon.classList.remove('text-white');
+                }
+                // Liens menu mobile (sidebar) en blanc
+                const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+                mobileMenuLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+            } else {
+                header.classList.add('bg-transparent');
+                header.classList.remove('bg-white', 'shadow-md');
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+                // Logo texte en blanc
+                const logoText = header.querySelector('span');
+                if (logoText) {
+                    logoText.classList.add('text-white');
+                    logoText.classList.remove('text-gray-800');
+                }
+                // Icône menu mobile en blanc
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.classList.add('text-white');
+                    mobileMenuIcon.classList.remove('text-gray-800');
+                }
+                // Liens menu mobile (sidebar) en blanc
+                const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+                mobileMenuLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+            }
+        });
+
+        // Fade-in Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html> 
