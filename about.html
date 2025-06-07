@@ -118,6 +118,14 @@
                 height: 8px;
             }
         }
+
+        @keyframes partners-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-partners-scroll {
+            animation: partners-scroll 30s linear infinite;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -248,45 +256,23 @@
         </div>
     </section>
 
-    <!-- Notre Équipe Section -->
+    <!-- Nos Partenaires Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Notre Équipe</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg fade-in">
-                    <div class="p-6">
-                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                            <img src="assets/images/team/ceo.jpg" alt="Directeur BS INTERNATIONAL" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Directeur</h3>
-                        <p class="text-gray-600 text-center">
-                            Plus de 15 ans d'expérience dans l'accompagnement des étudiants et entrepreneurs africains au Maroc.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg fade-in">
-                    <div class="p-6">
-                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                            <img src="assets/images/team/manager.jpg" alt="Manager BS INTERNATIONAL" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Manager</h3>
-                        <p class="text-gray-600 text-center">
-                            Expert en relations internationales et en développement des affaires au Maroc.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg fade-in">
-                    <div class="p-6">
-                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                            <img src="assets/images/team/consultant.jpg" alt="Consultant BS INTERNATIONAL" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Consultant</h3>
-                        <p class="text-gray-600 text-center">
-                            Spécialiste en accompagnement des étudiants et en procédures administratives.
-                        </p>
-                    </div>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nos Partenaires</h2>
+            <div class="overflow-hidden relative">
+                <div class="flex items-center gap-12 animate-partners-scroll" style="width: max-content;">
+                    <img src="assets/logo/partenaire1.png" alt="Partenaire 1" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire2.png" alt="Partenaire 2" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire3.png" alt="Partenaire 3" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire4.png" alt="Partenaire 4" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire5.png" alt="Partenaire 5" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <!-- Dupliquez les logos pour un effet de boucle infinie -->
+                    <img src="assets/logo/partenaire1.png" alt="Partenaire 1" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire2.png" alt="Partenaire 2" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire3.png" alt="Partenaire 3" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire4.png" alt="Partenaire 4" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                    <img src="assets/logo/partenaire5.png" alt="Partenaire 5" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
                 </div>
             </div>
         </div>
@@ -342,7 +328,7 @@
                             <svg class="h-5 w-5 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span>contact@bs-international.com</span>
+                            <span>bsinternational003@gmail.com</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -367,21 +353,21 @@
                         <a href="https://www.facebook.com/profile.php?id=61576007463610" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition" aria-label="Facebook BS INTERNATIONAL">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-pink-600 transition" aria-label="Instagram BS INTERNATIONAL">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-green-500 transition" aria-label="WhatsApp BS INTERNATIONAL">
+                        <a href="https://wa.me/message/KLJTQGHHEUETL1" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-green-500 transition" aria-label="WhatsApp BS INTERNATIONAL">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition" aria-label="LinkedIn BS INTERNATIONAL">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.tiktok.com/@bsinternational003?_t=ZM-8wUn4Xp0F54&_r=1" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-black transition" aria-label="TikTok BS INTERNATIONAL">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bsinternational003/profilecard/?igsh=ejViNG16aGRjeTk2" class="bg-gray-800 h-10 w-10 rounded-full flex items-center justify-center hover:bg-pink-600 transition" aria-label="Instagram BS INTERNATIONAL">
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
-                <p>&copy; 2024 BS INTERNATIONAL. Tous droits réservés.</p>
+                <p>&copy; 2025 BS INTERNATIONAL. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -556,6 +542,96 @@
         fadeElements.forEach(element => {
             fadeInObserver.observe(element);
         });
+    </script>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="vPxsMmiZeOa-4zby9VRpa";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let lastScroll = 0;
+        let tooltipTimeout;
+        let scrolling = false;
+        function showTooltip() {
+            const chatbaseBtn = document.querySelector('[aria-label="Open chat"]');
+            if (chatbaseBtn) {
+                let tooltip = chatbaseBtn.querySelector('.chatbase-tooltip');
+                if (!tooltip) {
+                    tooltip = document.createElement('span');
+                    tooltip.className = 'chatbase-tooltip';
+                    tooltip.innerText = "Discuter avec notre assistant virtuel !";
+                    chatbaseBtn.appendChild(tooltip);
+                }
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '1';
+            }
+        }
+        function hideTooltip() {
+            const chatbaseBtn = document.querySelector('[aria-label="Open chat"]');
+            if (chatbaseBtn) {
+                const tooltip = chatbaseBtn.querySelector('.chatbase-tooltip');
+                if (tooltip) {
+                    tooltip.style.visibility = 'hidden';
+                    tooltip.style.opacity = '0';
+                }
+            }
+        }
+        const style = document.createElement('style');
+        style.innerHTML = `
+        .chatbase-tooltip {
+            visibility: hidden;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 6px 12px;
+            position: absolute;
+            z-index: 9999;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        [aria-label="Open chat"]:hover .chatbase-tooltip,
+        [aria-label="Open chat"]:focus .chatbase-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        [aria-label="Open chat"] {
+            position: relative !important;
+        }
+        `;
+        document.head.appendChild(style);
+        const interval = setInterval(() => {
+            const chatbaseBtn = document.querySelector('[aria-label="Open chat"]');
+            if (chatbaseBtn) {
+                if (!chatbaseBtn.querySelector('.chatbase-tooltip')) {
+                    const tooltip = document.createElement('span');
+                    tooltip.className = 'chatbase-tooltip';
+                    tooltip.innerText = "Discuter avec notre assistant virtuel !";
+                    chatbaseBtn.appendChild(tooltip);
+                }
+                window.addEventListener('scroll', function() {
+                    scrolling = true;
+                    hideTooltip();
+                    clearTimeout(tooltipTimeout);
+                    tooltipTimeout = setTimeout(function() {
+                        scrolling = false;
+                        showTooltip();
+                    }, 2000);
+                });
+                setTimeout(function() {
+                    if (!scrolling) showTooltip();
+                }, 2000);
+                clearInterval(interval);
+            }
+        }, 500);
+    });
     </script>
 </body>
 </html> 
