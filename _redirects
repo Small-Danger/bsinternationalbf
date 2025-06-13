@@ -1,0 +1,17 @@
+# Forcer HTTPS
+http://* https://:splat 301!
+
+# Rediriger le sous-domaine Netlify vers le domaine principal
+https://bsinternationala.netlify.app/* https://bsinternationales.com/:splat 301!
+
+# Rediriger www vers non-www
+https://www.bsinternationales.com/* https://bsinternationales.com/:splat 301!
+
+# Rediriger les URLs sans .html vers .html
+/scholar    /scholar.html    301
+/business   /business.html   301
+/express    /express.html    301
+/about      /about.html      301
+
+# Rediriger la racine vers home.html
+/           /home.html       301 
